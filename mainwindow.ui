@@ -1,0 +1,707 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>608</width>
+    <height>482</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="image.qrc">
+    <normaloff>:/image/icon.png</normaloff>:/image/icon.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="pushButton_Play">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>140</y>
+      <width>30</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>30</width>
+      <height>30</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>30</width>
+      <height>30</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	border-image: url(:/image/play.png);
+	border:none;
+	color:rgb(255, 255, 255);
+}
+
+QPushButton:hover{
+border-image: url(:/image/play_hover.png);
+;border:none;
+color:rgb(255, 255, 255);
+}
+QPushButton:pressed{
+border-image: url(:/image/play_pressed.png);
+border:none;
+color:rgb(255, 255, 255);
+}
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_Right">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>140</y>
+      <width>30</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>30</width>
+      <height>30</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>30</width>
+      <height>30</height>
+     </size>
+    </property>
+    <property name="sizeIncrement">
+     <size>
+      <width>0</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+border-image: url(:/image/left.png);
+border:none;
+color:rgb(255, 255, 255);
+}
+
+QPushButton:hover{
+border-image: url(:/image/left_hover.png);
+;border:none;
+color:rgb(255, 255, 255);
+}
+QPushButton:pressed{
+border-image: url(:/image/left_pressed.png);
+border:none;
+color:rgb(255, 255, 255);
+}
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_Left">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>140</y>
+      <width>30</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>30</width>
+      <height>30</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>30</width>
+      <height>30</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+border-image: url(:/image/right.png);
+border:none;
+color:rgb(255, 255, 255);
+}
+
+QPushButton:hover{
+border-image: url(:/image/right_hover.png);
+;border:none;
+color:rgb(255, 255, 255);
+}
+QPushButton:pressed{
+border-image: url(:/image/right_pressed.png);
+border:none;
+color:rgb(255, 255, 255);
+}
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_heart">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>141</y>
+      <width>30</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>30</width>
+      <height>30</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>30</width>
+      <height>30</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+border-image: url(:/image/heart.png);
+border:none;
+color:rgb(255, 255, 255);
+}
+
+QPushButton:hover{
+border-image: url(:/image/heart_hover.png);
+;border:none;
+color:rgb(255, 255, 255);
+}
+QPushButton:pressed{
+border-image: url(:/image/heart_pressed.png);
+border:none;
+color:rgb(255, 255, 255);
+}
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QSlider" name="horizontalSlider_Music">
+    <property name="geometry">
+     <rect>
+      <x>279</x>
+      <y>140</y>
+      <width>201</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QSlider::groove:horizontal {
+
+ 
+border-image: url(:/image/zbutton.png);
+border: -10px solid #bbb;
+
+ 
+}
+ 
+QSlider::sub-page:horizontal {
+ 
+background: rgb(255,255,255);
+
+margin-left:5px;
+
+margin-right:5px;
+
+margin-top:12px;
+ 
+margin-bottom:13px;
+ 
+}
+ 
+QSlider::add-page:horizontal {
+ 
+background: rgb(0,0, 0);
+ 
+border: 0px solid #777;
+
+margin-left:5px;
+
+margin-right:5px;
+ 
+border-radius: 2px;
+
+margin-top:12px;
+ 
+margin-bottom:13px;
+ 
+}
+ 
+QSlider::handle:horizontal {
+border-image: url(:/image/music.png);
+width:15px;
+
+margin-left:10px;
+margin-right:10px;
+
+margin-top:10px;
+ 
+margin-bottom:10px;
+ 
+}
+ 
+QSlider::handle:horizontal:hover {
+ 
+border-image: url(:/image/music_hover.png);
+width:15px;
+
+
+margin-left:10px;
+margin-right:10px;
+
+ 
+margin-top:10px;
+ 
+margin-bottom:10px;
+}
+ 
+QSlider::sub-page:horizontal:disabled {
+ 
+background: #bbb;
+ 
+border-color: #999;
+ 
+}
+ 
+QSlider::add-page:horizontal:disabled {
+ 
+background: #eee;
+ 
+border-color: #999;
+ 
+}
+ 
+QSlider::handle:horizontal:disabled {
+ 
+background: #eee;
+ 
+border: 1px solid #aaa;
+ 
+border-radius: 7px;
+ 
+}
+ </string>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_Start">
+    <property name="geometry">
+     <rect>
+      <x>239</x>
+      <y>140</y>
+      <width>40</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+
+QLabel{
+font: 25 8pt ;
+border-image: url(:/image/zbutton.png);
+border:none;
+color:rgb(0, 0,0);
+}
+
+QLabel:hover{
+font: 25 8pt ;
+border:none;
+color:rgb(255, 255, 255);
+}
+
+</string>
+    </property>
+    <property name="text">
+     <string>88:88</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_End">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>140</y>
+      <width>40</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+
+QLabel{
+font: 25 8pt ;
+border-image: url(:/image/zbutton.png);
+border:none;
+color:rgb(0, 0,0);
+}
+
+QLabel:hover{
+font: 25 8pt ;
+
+;border:none;
+color:rgb(255, 255, 255);
+}
+</string>
+    </property>
+    <property name="text">
+     <string>88:88</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_End">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>140</y>
+      <width>30</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>30</width>
+      <height>30</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	border-image: url(:/image/end.png);
+	border:none;
+	color:rgb(255, 255, 255);
+}
+
+QPushButton:hover{
+border-image: url(:/image/end_hover.png);
+;border:none;
+color:rgb(255, 255, 255);
+}
+QPushButton:pressed{
+border-image: url(:/image/end_pressed.png);
+border:none;
+color:rgb(255, 255, 255);
+}
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_PlayMode">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>140</y>
+      <width>30</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>30</width>
+      <height>30</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+border-image: url(:/image/loop.png);
+border:none;
+color:rgb(255, 255, 255);
+}
+
+QPushButton:hover{
+border-image: url(:/image/loop_hover.png);
+border:none;
+color:rgb(255, 255, 255);
+}
+QPushButton:pressed{
+border-image: url(:/image/loop_pressed.png);
+border:none;
+color:rgb(255, 255, 255);
+}
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_Sound">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>100</y>
+      <width>30</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>30</width>
+      <height>30</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+border-image: url(:/image/mute.png);
+border:none;
+color:rgb(255, 255, 255);
+}
+
+QPushButton:hover{
+border-image: url(:/image/mute_hover.png);
+border:none;
+color:rgb(255, 255, 255);
+}
+QPushButton:pressed{
+border-image: url(:/image/mute_pressed.png);
+border:none;
+color:rgb(255, 255, 255);
+}
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QSlider" name="horizontalSlider_Sound">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>100</y>
+      <width>111</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QSlider::groove:horizontal {
+
+ 
+border-image: url(:/image/zbutton.png);
+border: -10px solid #bbb;
+
+ 
+}
+ 
+QSlider::sub-page:horizontal {
+ 
+background: rgb(255,255,255);
+
+margin-left:5px;
+
+margin-right:5px;
+
+margin-top:12px;
+ 
+margin-bottom:13px;
+ 
+}
+ 
+QSlider::add-page:horizontal {
+ 
+background: rgb(0,0, 0);
+ 
+border: 0px solid #777;
+
+margin-left:5px;
+
+margin-right:5px;
+ 
+border-radius: 2px;
+
+margin-top:12px;
+ 
+margin-bottom:13px;
+ 
+}
+ 
+QSlider::handle:horizontal {
+border-image: url(:/image/music.png);
+width:15px;
+
+margin-left:10px;
+margin-right:10px;
+
+margin-top:10px;
+ 
+margin-bottom:10px;
+ 
+}
+ 
+QSlider::handle:horizontal:hover {
+ 
+border-image: url(:/image/music_hover.png);
+width:15px;
+
+
+margin-left:10px;
+margin-right:10px;
+
+ 
+margin-top:10px;
+ 
+margin-bottom:10px;
+}
+ 
+QSlider::sub-page:horizontal:disabled {
+ 
+background: #bbb;
+ 
+border-color: #999;
+ 
+}
+ 
+QSlider::add-page:horizontal:disabled {
+ 
+background: #eee;
+ 
+border-color: #999;
+ 
+}
+ 
+QSlider::handle:horizontal:disabled {
+ 
+background: #eee;
+ 
+border: 1px solid #aaa;
+ 
+border-radius: 7px;
+ 
+}
+ </string>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_Name">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>95</y>
+      <width>251</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+QLabel{background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0.744318 rgba(0, 0, 0,0),stop:1 rgba(238, 241, 241, 255));font: 15pt &quot;楷体&quot;;border-radius:5px;color:rgb(0, 0,0);}
+
+QLabel:hover{font: 15pt &quot;楷体&quot;;border-radius:5px;color:rgb(255, 255, 255);}
+
+</string>
+    </property>
+    <property name="text">
+     <string>这里用来循环显示歌名</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::AutoText</enum>
+    </property>
+    <property name="scaledContents">
+     <bool>false</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_Word">
+    <property name="geometry">
+     <rect>
+      <x>85</x>
+      <y>100</y>
+      <width>30</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>30</width>
+      <height>30</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+border-image: url(:/image/word.png);
+border:none;
+color:rgb(255, 255, 255);
+}
+
+QPushButton:hover{
+border-image: url(:/image/word_hover.png);
+border:none;
+color:rgb(255, 255, 255);
+}
+QPushButton:pressed{
+border-image: url(:/image/word_pressed.png);
+border:none;
+color:rgb(255, 255, 255);
+}
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_Word">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>591</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 18pt &quot;:/fonts/font/禹卫书法行书简体.ttf&quot;;</string>
+    </property>
+    <property name="text">
+     <string>程序员很懒，还没有写这部分的功能！</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="image.qrc"/>
+ </resources>
+ <connections/>
+</ui>
