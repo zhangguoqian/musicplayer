@@ -73,6 +73,12 @@ void MainWindow::initMainWindow(const QString &title)
 
 void MainWindow::initPlayEnd(bool isOk)   //播放设置
 {
+    if(mp_PlayListWidget->count()==0)
+    {
+        ui->pushButton_Play->setVisible(0);
+        ui->pushButton_End->setVisible(1);
+        return;
+    }
     ui->pushButton_Play->setVisible(isOk);
     ui->pushButton_End->setVisible(!isOk);
 
@@ -99,7 +105,6 @@ void MainWindow::setMute(const bool isMute)
 {
     if(isMute)
     {
-
         ui->pushButton_Sound->setStyleSheet("QPushButton{border-image: url(:/image/mute.png);}"
                                             "QPushButton:hover{border-image: url(:/image/mute_hover.png);}"
                                             "QPushButton:pressed{border-image: url(:/image/mute_pressed.png);}");
@@ -512,13 +517,14 @@ void MainWindow::slotCurrentMedia(int postion)
         ui->label_Name->setText(mp_PlayListWidget->m_file[postion]);
         m_scrollCaptionStr = mp_PlayListWidget->m_file[postion];
     }
+
 }
 
 void MainWindow::slotLabelWordSetText()
 {
     if(mp_Timer->isActive())
     {
-        ui->label_Word->setText("衣带渐宽终不悔，为伊消得人憔悴！");
+        ui->label_Word->setText(QString::fromLocal8Bit("衣带渐宽终不悔，为伊消得人憔悴！"));
     }
 }
 

@@ -4,9 +4,11 @@
 #include <QMessageBox>
 #include <QSystemSemaphore>
 #include <QSharedMemory>
+#include <QTextCodec>
 
 int main(int argc, char *argv[])
 {
+//    QTextCodec::setCodecForLocale(QTextCodec::codecForName("UTF-16"));
     QApplication a(argc, argv);
     //QTextCodec::setCodecForLocale("UTF-8");
     //    MainWindow w;
