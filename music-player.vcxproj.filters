@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mainwindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="playlistwidget\playlistwidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="setting\setting.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="traymenu\traymenu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="mainwindow.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="playlistwidget\playlistwidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="setting\setting.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="traymenu\traymenu.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    
+    
+    
+    
+    <CustomBuild Include="debug\moc_predefs.h.cbt">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="release\moc_predefs.h.cbt">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    
+    
+    
+    
+    
+    
+    
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="mainwindow.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\currentItemInloop.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\currentItemInloop_hover.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\currentItemInloop_pressed.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\currentIteminloop.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\currentIteminloop_hover.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\currentIteminloop_pressed.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\end.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\end_hover.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\end_pressed.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\heart.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\heart_hover.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\heart_pressed.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\icon.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\icon_hover.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\icon_pressed.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <QtRcc Include="image.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <None Include="image\left.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\left_hover.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\left_pressed.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\list.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\loop.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\loop_hover.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\loop_pressed.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\music.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\music_hover.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\music_pressed.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\mute.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\mute_hover.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\mute_pressed.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\one.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\one_hover.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\one_pressed.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\play.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\play_hover.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\play_pressed.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\rand.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\rand_hover.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\rand_pressed.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\right.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\right_hover.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\right_pressed.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\sequential.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\sequential_hover.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\sequential_pressed.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\sound.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\sound_hover.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\sound_pressed.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\time.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\time_hover.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\time_pressed.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\word.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\word_hover.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\word_pressed.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\wordno.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\wordno_hover.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\wordno_pressed.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\zbutton.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="image\zlay.psd">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

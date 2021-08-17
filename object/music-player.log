@@ -1,0 +1,12 @@
+﻿  Generate moc_predefs.h
+  main.cpp
+  mainwindow.cpp
+  playlistwidget.cpp
+  setting.cpp
+  traymenu.cpp
+  qrc_image.cpp
+  moc_mainwindow.cpp
+  moc_playlistwidget.cpp
+  moc_setting.cpp
+  moc_traymenu.cpp
+  music-player.vcxproj -> F:\git\mymusic_repository\music-player\bin\music-player.exe
