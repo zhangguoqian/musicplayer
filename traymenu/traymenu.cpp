@@ -36,18 +36,20 @@ void TrayMenu::actionClickShow(bool isOk)
 {
     qDebug()<<"actionClickShow():"<<isOk<<".";
     emit signalIsShowMainWindow(isOk);
+    mp_Show->setChecked(isOk);
 }
 
 void TrayMenu::actionClickTransparentMouse(bool isOk)
 {
     qDebug()<<"actionClickTransparentMouse():"<<isOk<<".";
     emit signalIsTransparentMouse(isOk);
+    mp_TransparentMouse->setChecked(isOk);
 }
 
 void TrayMenu::actionClickPlayList(bool isOk)
 {
     qDebug()<<"actionClickPlayList()"<<isOk<<".";
-    m_strIncrease =QFileDialog::getExistingDirectory(this,"选择添加的音乐库","E:/");
+    m_strIncrease =QFileDialog::getExistingDirectory(this,QString::fromLocal8Bit("选择添加的音乐库music"),"E:/");
     qDebug()<<"添加目录为:"<<m_strIncrease;
     if(!m_strIncrease.isNull())
     {

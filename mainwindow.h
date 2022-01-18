@@ -91,6 +91,7 @@ private:
     void initMediaPlaylist();
     QMediaPlayer *m_MediaPlayer;
     void initMediaPlayer();
+    bool m_ShowMainWindow;  //显示主界面
     bool m_isTransparentForMouse;
     void setTransparentForMouse(bool isOk);
     void initMainWindow(const QString &title); //初始化主界面

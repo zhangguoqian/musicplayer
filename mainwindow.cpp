@@ -29,6 +29,8 @@ MainWindow::~MainWindow()
     m_Set.setAppLocation(QPoint(geometry().x(),geometry().y()));
     m_Set.setPlayMode(m_PlayMode%5);
     m_Set.setVolume(ui->horizontalSlider_Sound->value());
+    m_Set.setActionMain(m_ShowMainWindow);
+    m_Set.setTransparentMouse(m_isTransparentForMouse);
     delete mp_TrayIcon;
     delete mp_Traymenu;
     delete ui;
@@ -68,7 +70,6 @@ void MainWindow::initMainWindow(const QString &title)
     connect(mp_Timer,SIGNAL(timeout()),this,SLOT(slotLabelWordSetText()));
     mp_Timer_Name = new QTimer(this);
     connect(mp_Timer_Name,SIGNAL(timeout()),this,SLOT(slotLabelName()));
-
 }
 
 void MainWindow::initPlayEnd(bool isOk)   //播放设置
@@ -127,6 +128,9 @@ void MainWindow::ininTrayMenu()
     connect(mp_Traymenu,SIGNAL(signalIsIncrease(QString)),this,SLOT(setIncrease(QString)));
     connect(mp_Traymenu,SIGNAL(signalUpdate(bool)),mp_PlayListWidget,SLOT(slotUpdateList(bool)));
     connect(mp_Traymenu,SIGNAL(signalIsQuit()),this,SLOT(close()));
+    mp_Traymenu->actionClickShow(m_Set.getActionMain());
+    this->setVisible(m_Set.getActionMain());
+    mp_Traymenu->actionClickTransparentMouse(m_Set.getTransparentMouse());
 }
 
 void MainWindow::initTrayIcon(const QString &iconname)
@@ -209,15 +213,17 @@ bool MainWindow::getLabelFontColor(const QLabel *label)
 {
     QScreen *screen = QGuiApplication::primaryScreen();
     QPixmap p = screen->grabWindow(QApplication::desktop()->winId(),label->x()+pos().x(),label->y()+pos().y(),label->width(),label->height());
-    uchar *mat_data = p.toImage().bits();
+    QImage image = p.toImage();
+    uchar *mat_data = image.bits();
     int sum =0;
-    int ave =0;
+    double ave =0;
     int size =p.size().width()*p.size().height();
-    for (int i(0);i<size ;++i)
+    for (int i(0);i<size;++i)
     {
-        sum+=mat_data[i];
+        sum+=*(mat_data+i);
     }
     ave = sum/(size);
+//    qDebug()<<ave;
     if(ave>=130)
     {
         return 1;
@@ -251,6 +257,7 @@ void MainWindow::on_pushButton_Left_clicked()
 
 void MainWindow::setIsShowMainWindow(bool isOk)
 {
+    m_ShowMainWindow = isOk;
     if(isOk)
     {
         show();
@@ -264,6 +271,7 @@ void MainWindow::setIsShowMainWindow(bool isOk)
 
 void MainWindow::setIsTransparentMouse(bool isOk)
 {
+    isDrag = false;
     setTransparentForMouse(isOk);
     m_isTransparentForMouse = isOk;
     qDebug()<<"isTransparentMouse Complete:"<<isOk<<".";
@@ -395,14 +403,14 @@ void MainWindow::initPlayListWidget()
 
 void MainWindow::initMediaPlaylist()
 {
-    m_MediaPlayList = new QMediaPlaylist;
+    m_MediaPlayList = new QMediaPlaylist(this);
 
     initMediaPlayer();
 }
 
 void MainWindow::initMediaPlayer()
 {
-    m_MediaPlayer = new QMediaPlayer();
+    m_MediaPlayer = new QMediaPlayer(this);
     m_MediaPlayList->addMedia(mp_PlayListWidget->m_mediaList);
     m_MediaPlayer->setPlaylist(m_MediaPlayList);
     connect(m_MediaPlayList,SIGNAL(currentIndexChanged(int)),this,SLOT(slotCurrentMedia(int)));

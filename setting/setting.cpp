@@ -108,3 +108,35 @@ void Setting::setPlayIndex(int PlayIndex)
     mp_Setting->setValue("CONFIG/PlayIndex",PlayIndex);
     m_PlayIndex = PlayIndex;
 }
+
+bool Setting::getTransparentMouse()
+{
+    bool x;
+    mp_Setting->beginGroup("CONFIG");
+    x = mp_Setting->value("TransparentMouse").toBool();
+    mp_Setting->endGroup();
+    m_TransparentMouse = x;
+    return m_TransparentMouse;
+}
+
+void Setting::setTransparentMouse(bool TransparentMouse)
+{
+    mp_Setting->setValue("CONFIG/TransparentMouse",TransparentMouse);
+    m_TransparentMouse = TransparentMouse;
+}
+
+bool Setting::getActionMain()
+{
+    bool x;
+    mp_Setting->beginGroup("CONFIG");
+    x = mp_Setting->value("ActionMain").toBool();
+    mp_Setting->endGroup();
+    m_ActionMain = x;
+    return m_ActionMain;
+}
+
+void Setting::setActionMain(bool ActionMain)
+{
+    mp_Setting->setValue("CONFIG/ActionMain",ActionMain);
+    m_ActionMain = ActionMain;
+}
