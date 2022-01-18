@@ -55,5 +55,8 @@ DESTDIR = $$PWD/bin
 UI_DIR =$$PWD/ui
 OBJECTS_DIR = $$PWD/object
 
+DISTFILES += \
+    README.md
+
 
 
