@@ -34,6 +34,8 @@ private:
     QAction* mp_Quit;
     QAction* mp_PlayList;
     QAction* mp_UpdateMusic;
+    QAction* mp_DownLoad;
+    QAction* mp_UpLoad;
     QAction* mp_UpdateApp;
     Setting m_Set;
     QString m_strIncrease;

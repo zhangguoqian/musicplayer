@@ -20,6 +20,9 @@ TrayMenu::TrayMenu(QWidget *parent) : QMenu(parent)
     mp_UpdateApp = new QAction(QString::fromLocal8Bit("检查更新"),this);
     connect(mp_UpdateApp ,SIGNAL(triggered(bool)),this,SLOT(actionClickUpdateApp(bool)));
 
+    mp_DownLoad = new QAction(QString::fromLocal8Bit("下载音乐"),this);
+    //mp_UpLoad = new QAction(QString::fromLocal8Bit("上传音乐"),this);
+
     mp_Quit = new QAction(QString::fromLocal8Bit("退出"),this);
     connect(mp_Quit,SIGNAL(triggered()),this,SLOT(actionClickQuit()));
 
@@ -28,6 +31,8 @@ TrayMenu::TrayMenu(QWidget *parent) : QMenu(parent)
     addAction(mp_PlayList);
     addAction(mp_UpdateMusic);
     addAction(mp_UpdateApp);
+    addAction(mp_DownLoad);
+
     addAction(mp_Quit);
 
 }
@@ -60,7 +65,7 @@ void TrayMenu::actionClickPlayList(bool isOk)
 void TrayMenu::actionClickUpdate(bool isOk)
 {
     qDebug()<<"actionClickUpdate()"<<isOk<<".";
-    emit signalUpdate(isOk);  
+    emit signalUpdate(isOk);
 }
 
 void TrayMenu::actionClickUpdateApp(bool isOk)

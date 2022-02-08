@@ -10,8 +10,6 @@
 #include <QFileDialog>
 #include "setting/setting.h"
 
-
-
 class PlayListWidget : public QListWidget
 {
     Q_OBJECT
