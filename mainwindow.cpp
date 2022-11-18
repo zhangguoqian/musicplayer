@@ -486,15 +486,15 @@ QString MainWindow::formatTime(qint64 timeMilliSeconds)
             .arg(minutes, 2, 10, QLatin1Char('0'))
             .arg(seconds, 2, 10, QLatin1Char('0'));
 }
-
-void MainWindow::initVideoWidget()
-{
-    m_VideoWidget = new QVideoWidget();
-    layoput = new QGridLayout();
-    m_MediaPlayer->setVideoOutput(m_VideoWidget);
-    layoput->addWidget(m_VideoWidget);
-    //ui->widget->setLayout(layoput);
-}
+//
+//void MainWindow::initVideoWidget()
+//{
+//    m_VideoWidget = new QVideoWidget();
+//    layoput = new QGridLayout();
+//    m_MediaPlayer->setVideoOutput(m_VideoWidget);
+//    layoput->addWidget(m_VideoWidget);
+//    //ui->widget->setLayout(layoput);
+//}
 
 
 void MainWindow::on_horizontalSlider_Music_valueChanged(int value)

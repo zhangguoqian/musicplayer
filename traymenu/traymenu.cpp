@@ -2,28 +2,28 @@
 
 TrayMenu::TrayMenu(QWidget *parent) : QMenu(parent)
 {
-    mp_Show = new QAction(QString::fromLocal8Bit("显示主界面"),this);
+    mp_Show = new QAction("显示主界面",this);
     mp_Show->setCheckable(true);
     mp_Show->setChecked(1);
     connect(mp_Show,SIGNAL(triggered(bool)),this,SLOT(actionClickShow(bool)));
 
-    mp_TransparentMouse =new QAction(QString::fromLocal8Bit("鼠标穿透"),this);
+    mp_TransparentMouse =new QAction("鼠标穿透",this);
     mp_TransparentMouse->setCheckable(1);
     connect(mp_TransparentMouse,SIGNAL(triggered(bool)),this,SLOT(actionClickTransparentMouse(bool)));
 
-    mp_PlayList = new QAction(QString::fromLocal8Bit("添加音乐库"),this);
+    mp_PlayList = new QAction("添加音乐库",this);
     connect(mp_PlayList,SIGNAL(triggered(bool)),this,SLOT(actionClickPlayList(bool)));
 
-    mp_UpdateMusic = new QAction(QString::fromLocal8Bit("更新音乐库"),this);
+    mp_UpdateMusic = new QAction("更新音乐库",this);
     connect(mp_UpdateMusic ,SIGNAL(triggered(bool)),this,SLOT(actionClickUpdate(bool)));
 
-    mp_UpdateApp = new QAction(QString::fromLocal8Bit("检查更新"),this);
+    mp_UpdateApp = new QAction("检查更新",this);
     connect(mp_UpdateApp ,SIGNAL(triggered(bool)),this,SLOT(actionClickUpdateApp(bool)));
 
-    mp_DownLoad = new QAction(QString::fromLocal8Bit("下载音乐"),this);
-    //mp_UpLoad = new QAction(QString::fromLocal8Bit("上传音乐"),this);
+    mp_DownLoad = new QAction("下载音乐",this);
+    //mp_UpLoad = new QAction("上传音乐"),this);
 
-    mp_Quit = new QAction(QString::fromLocal8Bit("退出"),this);
+    mp_Quit = new QAction("退出"),this;
     connect(mp_Quit,SIGNAL(triggered()),this,SLOT(actionClickQuit()));
 
     addAction(mp_Show);
@@ -54,13 +54,14 @@ void TrayMenu::actionClickTransparentMouse(bool isOk)
 void TrayMenu::actionClickPlayList(bool isOk)
 {
     qDebug()<<"actionClickPlayList()"<<isOk<<".";
-    m_strIncrease =QFileDialog::getExistingDirectory(this,QString::fromLocal8Bit("选择添加的音乐库music"),"E:/");
+    m_strIncrease =QFileDialog::getExistingDirectory(this,"选择添加的音乐库music","E:/");
     qDebug()<<"添加目录为:"<<m_strIncrease;
     if(!m_strIncrease.isNull())
     {
         emit signalIsIncrease(m_strIncrease);
     }
 }
+
 
 void TrayMenu::actionClickUpdate(bool isOk)
 {

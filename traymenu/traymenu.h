@@ -39,8 +39,6 @@ private:
     QAction* mp_UpdateApp;
     Setting m_Set;
     QString m_strIncrease;
-
-
 };
 
 #endif // TRAYMENU_H

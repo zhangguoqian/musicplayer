@@ -26,7 +26,6 @@
 #include <QApplication>
 #include <QDesktopWidget>
 #include <QDateTime>
-#include <QVideoWidget>
 #include <QBoxLayout>
 #include "setting/setting.h"
 #include "traymenu/traymenu.h"
@@ -110,10 +109,8 @@ private:
     Setting m_Set;
     QString m_scrollCaptionStr;
 
-    QVideoWidget *m_VideoWidget;
-    QGridLayout* layoput;
-    void initVideoWidget();
-
-
+//    QVideoWidget *m_VideoWidget;
+//    QGridLayout* layoput;
+//    void initVideoWidget();
 };
 #endif // MAINWINDOW_H
